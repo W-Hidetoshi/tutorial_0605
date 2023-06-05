@@ -3,8 +3,31 @@
     <head>
         <title>テストページ</title>
         <link rel="stylesheet" href="style.css">
+        <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
     </head>
     <body>
+         <!--ページ切り替え時のローディングアニメーション　dubdesignページより -->
+         <div class="loading-anime-wrap">
+            <img class="loading-anime-img" src="https://dubdesign.net/wp-content/uploads/2021/05/bluefvsp_logoonly3.svg">
+            <div class="loading-anime-line"></div>
+          </div>       
+        
+        <a href="index.html">[戻る]</a><br>
+        <!--<a href="javascript:history.back()">[戻る]</a>-->
+        <!--スクリプト-->
+        <script>
+           $(function(){
+                $(window).on('load',function(){
+                    $(".loading-anime-wrap").delay(2000).fadeOut('slow');
+                });
+                function loaderClose(){
+                    $(".loading-anime-wrap").fadeOut('slow');
+                }
+                setTimeout(loaderClose,10000);
+                });
+            </script>
+        <!--スクリプト　ここまで-->
+
         Hello, Git.<br>
         <p class ="#">こんにちは</p>
         <hr>
@@ -25,8 +48,12 @@
         </span>
         <h2>最後に</h2>
         <ul>
-            <li>いろいろ多趣味ではありますが、</li>
+            <li>趣味は多いほうだと思っています。</li>
+            <li>人見知りをすることがあります。</li>
+            <li>ストレス解消にいろんなことをします。<br>
+            とくに温泉（サウナ）に入ったり、カラオケに行ったり、また早めに寝たりしてストレス解消をしています。</li>
+            <li></li>
         </ul>
-        <p>まだまだ未熟者ではありますが、これからエンジニアとして技術を磨いてまいります。</p>
+        <p>エンジニア経験はなく、未熟者ではありますが、技術を磨いていきたいです。</p>
     </body>
 </html>
