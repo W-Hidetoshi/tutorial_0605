@@ -3,8 +3,29 @@
     <head>
         <title>テストページ</title>
         <link rel="stylesheet" href="style.css">
+        <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
     </head>
     <body>
+         <!--ページ切り替え時のローディングアニメーション　dubdesignページより -->
+         <div class="loading-anime-wrap">
+            <img class="loading-anime-img" src="https://dubdesign.net/wp-content/uploads/2021/05/bluefvsp_logoonly3.svg">
+            <div class="loading-anime-line"></div>
+          </div>       
+        
+        <!--スクリプト-->
+        <script>
+           $(function(){
+                $(window).on('load',function(){
+                    $(".loading-anime-wrap").delay(2000).fadeOut('slow');
+                });
+                function loaderClose(){
+                    $(".loading-anime-wrap").fadeOut('slow');
+                }
+                setTimeout(loaderClose,10000);
+                });
+            </script>
+        <!--スクリプト　ここまで-->
+
         Hello, Git.<br>
         <p class ="#">こんにちは</p>
         <hr>
